@@ -1,0 +1,22 @@
+{
+  "name": "sammler-web",
+  "version": "0.0.1",
+  "description": "Web interface for sammler.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sammler/sammler-web.git"
+  },
+  "keywords": [
+    "sammler"
+  ],
+  "author": "Stefan Walther <swrqtch@gmail.com> (http://qliksite.io)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sammler/sammler-web/issues"
+  },
+  "homepage": "https://github.com/sammler/sammler-web#readme"
+}
