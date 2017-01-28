@@ -12,6 +12,7 @@ import { AppComponent }         from './app.component';
 import { LogsComponent }        from './logs/logs.component';
 import { DashboardComponent }   from './dashboard/dashboard.component';
 import { JobsComponent }        from './jobs/jobs.component';
+import { LinksComponent }       from './links/links.component';
 
 import { LogsService }          from './logs/logs.service';
 
@@ -20,7 +21,8 @@ import { LogsService }          from './logs/logs.service';
     AppComponent,
     LogsComponent,
     DashboardComponent,
-    JobsComponent
+    JobsComponent,
+    LinksComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +46,12 @@ import { LogsService }          from './logs/logs.service';
       {
         path: 'logs',
         component: LogsComponent
-      }
+      },
+      {
+        path: 'links',
+        component: LinksComponent
+      },
+
 
     ])
   ],
