@@ -15,6 +15,7 @@ import { JobsComponent }        from './jobs/jobs.component';
 import { LinksComponent }       from './links/links.component';
 
 import { LogsService }          from './logs/logs.service';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { LogsService }          from './logs/logs.service';
     LogsComponent,
     DashboardComponent,
     JobsComponent,
-    LinksComponent
+    LinksComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -44,15 +46,17 @@ import { LogsService }          from './logs/logs.service';
         component: JobsComponent
       },
       {
+        path: 'login',
+        component: LoginComponent
+      },
+      {
         path: 'logs',
         component: LogsComponent
       },
       {
         path: 'links',
         component: LinksComponent
-      },
-
-
+      }
     ])
   ],
   providers: [
