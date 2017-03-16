@@ -3,7 +3,7 @@ import { Http, Headers } from '@angular/http';
 import 'rxjs/Rx';
 
 @Injectable()
-export class AuthService {
+export class UserService {
   private loggedIn: boolean = false;
 
   constructor(private http: Http) {
@@ -21,7 +21,7 @@ export class AuthService {
         { headers }
       )
       .map(res => res.json())
-      .map((res) => {
+      .map(res => {
         if (res.success) {
           localStorage.setItem('auth_token', res.auth_token);
           this.loggedIn = true;

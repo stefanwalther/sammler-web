@@ -8,14 +8,19 @@ import { RouterModule }         from '@angular/router';
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService }  from './in-memory-data.service';
 
-import { AppComponent }         from './app.component';
-import { LogsComponent }        from './logs/logs.component';
-import { DashboardComponent }   from './dashboard/dashboard.component';
-import { JobsComponent }        from './jobs/jobs.component';
-import { LinksComponent }       from './links/links.component';
-
-import { LogsService }          from './logs/logs.service';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { AppComponent } from './app.component';
+import { LogsComponent } from './logs/logs.component';
+import { JobsComponent } from './jobs/jobs.component';
+import { LinksComponent } from './links/links.component';
 import { LoginComponent } from './login/login.component';
+
+import { LogsService } from './logs/logs.service';
+import { UserService } from './user.service';
+import {LoggedInGuard} from './logged-in.guard';
+import { ClarityModule } from 'clarity-angular';
+
+import {routes} from './app.routes';
 
 @NgModule({
   declarations: [
@@ -28,39 +33,16 @@ import { LoginComponent } from './login/login.component';
   ],
   imports: [
     BrowserModule,
+    ClarityModule.forRoot(),
     FormsModule,
     HttpModule,
     InMemoryWebApiModule.forRoot(InMemoryDataService),
-    RouterModule.forRoot([
-      {
-        path: '',
-        redirectTo: '/dashboard',
-        pathMatch: 'full'
-      },
-      {
-        path: 'dashboard',
-        component: DashboardComponent
-      },
-      {
-        path: 'jobs',
-        component: JobsComponent
-      },
-      {
-        path: 'login',
-        component: LoginComponent
-      },
-      {
-        path: 'logs',
-        component: LogsComponent
-      },
-      {
-        path: 'links',
-        component: LinksComponent
-      }
-    ])
+    RouterModule.forRoot(routes)
   ],
   providers: [
-    LogsService
+    LogsService,
+    UserService,
+    LoggedInGuard
   ],
   bootstrap: [AppComponent]
 })

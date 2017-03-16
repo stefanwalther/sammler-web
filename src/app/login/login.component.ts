@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { AuthService } from './../auth.service';
+import { UserService } from '../user.service';
 
 @Component({
   selector: 'login',
@@ -10,7 +10,7 @@ import { AuthService } from './../auth.service';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private authService: AuthService, private router: Router) {
+  constructor(private authService: UserService, private router: Router) {
   }
 
   ngOnInit() {
