@@ -1,12 +1,41 @@
-<h1>
-  {{title}}
-</h1>
+<div class="main-container">
+  <div *ngIf="edited==true" class="alert alert-app-level">
+  </div>
+  <header class="header header-6">
+    <app-header></app-header>
+  </header>
+  <nav class="subnav">
+    ...
+  </nav>
+  <div class="content-container">
+    <div class="content-area">
+      <router-outlet></router-outlet>
+    </div>
+    <nav class="sidenav">
+      <section class="sidenav-content">
+        <section class="nav-group">
+          <label>Pages</label>
+          <ul class="nav-list">
+            <li>
+              <a routerLink="/dashboard" class="nav-link" routerLinkActive="active">Dashboard</a>
+            </li>
+            <li>
+              <a routerLink="/links" class="nav-link" routerLinkActive="active">Links</a>
+            </li>
+            <li>
+              <a routerLink="/login" class="nav-link" routerLinkActive="active">Login</a>
+            </li>
+            <li>
+              <a routerLink="/logs" class="nav-link" routerLinkActive="active">Logs</a>
+            </li>
+            <li>
+              <a routerLink="/jobs" class="nav-link" routerLinkActive="active">Jobs</a>
+            </li>
+          </ul>
+        </section>
+      </section>
+    </nav>
+  </div>
+</div>
 
-<nav>
-  <a routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
-  <a routerLink="/links" routerLinkActive="active">Links</a>
-  <a routerLink="/login" routerLinkActive="active">Login</a>
-  <a routerLink="/logs" routerLinkActive="active">Logs</a>
-  <a routerLink="/jobs" routerLinkActive="active">Jobs</a>
-</nav>
-<router-outlet></router-outlet>
+

@@ -21,6 +21,7 @@ import {LoggedInGuard} from './logged-in.guard';
 import { ClarityModule } from 'clarity-angular';
 
 import {routes} from './app.routes';
+import { HeaderComponent } from './common/header/header.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import {routes} from './app.routes';
     DashboardComponent,
     JobsComponent,
     LinksComponent,
-    LoginComponent
+    LoginComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

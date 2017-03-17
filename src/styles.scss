@@ -1,0 +1,23 @@
+.branding {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  min-width: 204px;
+  padding: 0 24px;
+  padding-top: 0px;
+  padding-right: 24px;
+  padding-bottom: 0px;
+  padding-left: 24px;
+}
+.title {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: Metropolis,Avenir Next,Helvetica Neue,Arial,sans-serif;
+  letter-spacing: .01em;
+  color: #fafafa;
+  line-height: 60px;
+  text-decoration: none;
+}
