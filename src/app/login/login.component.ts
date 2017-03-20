@@ -3,6 +3,8 @@ import { Router } from '@angular/router';
 
 import { UserService } from '../user.service';
 
+import { LoginUser } from '../common/login-user';
+
 @Component({
   selector: 'login',
   templateUrl: './login.component.html',
@@ -16,8 +18,8 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
   }
 
-  onSubmit(email, password) {
-    this.authService.login(email, password).subscribe(result => {
+  onSubmit(username, password) {
+    this.authService.login(username, password).subscribe(result => {
       if (result) {
         this.router.navigate(['']);
       }
