@@ -12,17 +12,17 @@ export const routes = [
     path: '',
     redirectTo: '/dashboard',
     pathMatch: 'full',
-    canActivate: [LoggedInGuard]
+    // canActivate: [LoggedInGuard]
   },
   {
     path: 'dashboard',
     component: DashboardComponent,
-    canActivate: [LoggedInGuard]
+    // canActivate: [LoggedInGuard]
   },
   {
     path: 'jobs',
     component: JobsComponent,
-    canActivate: [LoggedInGuard]
+    // canActivate: [LoggedInGuard]
   },
   {
     path: 'login',
@@ -36,6 +36,6 @@ export const routes = [
   {
     path: 'links',
     component: LinksComponent,
-    canActivate: [LoggedInGuard]
+    // canActivate: [LoggedInGuard]
   }
 ];

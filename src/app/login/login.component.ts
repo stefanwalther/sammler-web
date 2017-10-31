@@ -20,10 +20,10 @@ export class LoginComponent implements OnInit {
 
   onSubmit(username, password) {
     this.authService.login(username, password).subscribe(result => {
+      console.log('login-result', result);
       if (result) {
         this.router.navigate(['']);
       }
     });
   }
-
 }
