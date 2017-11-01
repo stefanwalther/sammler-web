@@ -7,11 +7,11 @@ export class UserService {
   private loggedIn: boolean = false;
 
   constructor(private http: Http) {
-    this.loggedIn = !! localStorage.getItem('auth_token');
+    this.loggedIn = !!localStorage.getItem('auth_token');
   }
 
-  login(username:String, password:String) {
-    let headers = new Headers();
+  login(username: String, password: String) {
+    const headers = new Headers();
     headers.append('Content-Type', 'application/json');
 
     return this.http
