@@ -11,8 +11,6 @@ import { InMemoryDataService }  from './in-memory-data.service';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AppComponent } from './app.component';
 import { LogsComponent } from './logs/logs.component';
-import { JobsComponent } from './jobs/jobs.component';
-import { LinksComponent } from './links/links.component';
 import { LoginComponent } from './login/login.component';
 
 import { LogsService } from './logs/logs.service';
@@ -28,8 +26,6 @@ import { HeaderComponent } from './common/header/header.component';
     AppComponent,
     LogsComponent,
     DashboardComponent,
-    JobsComponent,
-    LinksComponent,
     LoginComponent,
     HeaderComponent
   ],
